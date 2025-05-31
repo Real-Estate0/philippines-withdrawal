@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processing Payment - CoinPro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center p-8 bg-gray-800 rounded-2xl shadow-xl max-w-md w-full">
+    <div class="w-24 h-24 mx-auto border-8 border-blue-500 border-t-transparent rounded-full animate-spin" style="animation: spin-slow 2s linear infinite;"></div>
+    <h1 class="mt-6 text-xl font-bold">Processing Payment...</h1>
+    <p class="mt-2 text-gray-400 text-sm">
+      If your payment was successful, please wait while our system verifies it. Do not close this page.
+    </p>
+  </div>
+</body>
+</html>

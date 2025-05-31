@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Gas Fee - CoinPro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="p-8 bg-gray-800 rounded-2xl shadow-lg w-full max-w-md text-center">
+    <h1 class="text-2xl font-bold mb-4">One-Time Gas Fee</h1>
+    <p class="mb-4 text-gray-300">To activate withdrawals, please pay the one-time gas fee using Bitcoin.</p>
+
+    <div class="bg-gray-700 p-4 rounded-lg mb-4">
+      <p class="text-sm text-gray-400">Send exactly:</p>
+      <p class="text-xl font-semibold text-green-400">0.0005 BTC</p>
+      <p class="mt-2 text-sm text-gray-400">To this address:</p>
+      <p class="text-sm break-words font-mono text-yellow-400">bc1qp9juaut6kgqhp00e2m64kmf76lrv54jn9vdzsf</p>
+    </div>
+
+    <button onclick="copyAddress()" class="mb-4 text-sm text-blue-400 hover:underline">Copy Address</button>
+
+    <div class="mb-6">
+      <p class="text-sm text-gray-300">Prefer bank transfer?</p>
+      <a href="https://wa.me/13194874880?text=Hi%2C%20I%20want%20to%20pay%20gas%20fee%20via%20bank%20transfer" target="_blank" class="text-blue-500 hover:underline">Contact Agent on WhatsApp</a>
+    </div>
+
+    <button onclick="confirmPayment()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold">I've Paid</button>
+  </div>
+
+  <script>
+    function copyAddress() {
+      navigator.clipboard.writeText('bc1qexamplewalletaddress123xyz');
+      alert('Wallet address copied to clipboard.');
+    }
+
+    function confirmPayment() {
+      localStorage.setItem('gasFeePaid', true);
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect Wallet - CoinPro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center p-8 bg-gray-800 rounded-2xl shadow-lg max-w-md w-full">
+    <h1 class="text-2xl font-bold mb-4">Connect Your Coinbase Wallet</h1>
+    <p class="mb-6 text-gray-300">To proceed, please connect your Coinbase Wallet.</p>
+    <button id="connectWalletBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold">Connect Wallet</button>
+
+    <div id="loading" class="hidden mt-8">
+      <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin mx-auto"></div>
+      <p class="mt-4 text-gray-400">Connecting...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('connectWalletBtn').addEventListener('click', () => {
+      document.getElementById('connectWalletBtn').classList.add('hidden');
+      document.getElementById('loading').classList.remove('hidden');
+
+      // Simulate wallet connection
+      setTimeout(() => {
+        // Simulate storing a connected wallet address (in real case, use Coinbase SDK)
+        localStorage.setItem('walletConnected', true);
+        window.location.href = 'wallet-balance.html';
+      }, 4000); // 4 seconds fake load
+    });
+  </script>
+</body>
+</html>
